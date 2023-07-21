@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h3{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .time{
+            display: flex;
+            margin: auto;
+            width: 200px;
+            color: darkgreen;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 5px 5px 15px #aaa;
+            border-radius: 10px;
+            font-size: 25px;
+        }
+    </style>
+    <title>Date</title>
+</head>
+<body>
+    <h3>This is a website for showing Time</h3>
+    <br>
+    <div class="time">
+    <h4 id="time"></h4>
+    </div>
+    <script>
+        // typeof(Date());
+        function showTime(){
+            document.getElementById('time').innerHTML = Date().slice(15,-22);
+        }
+        setInterval(showTime, 1000);
+    </script>
+</body>
+</html>
